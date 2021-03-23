@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "SpeedEat"
+  "defaultProject": "SpeedEat",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
