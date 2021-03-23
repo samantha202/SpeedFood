@@ -1,0 +1,49 @@
+.footer_top_holder
+{
+	position: relative;
+  top: 1px;
+}
+
+.footer_top_holder
+{
+	background-size: initial;
+}
+div.blog_holder.masonry.masonry_pagination
+{
+	margin-top: 50px;
+}
+
+#custom_html-2 a
+{
+	color: white!important;
+}
+
+div.wpcf7-response-output.wpcf7-mail-sent-ok
+{
+	background-color: #006666!important;
+}
+
+.column3.footer_col3
+{
+	text-align: right;
+}
+
+.page-footer
+{
+	background-image: url('/../.././assets/images/art/bgf.jpg');
+
+}
+
+#col1{
+margin-top: 200px;
+margin-right:40px;
+margin-bottom:30px;
+margin-left:20px;
+}
+#col3
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}

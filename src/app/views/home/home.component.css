@@ -1,0 +1,64 @@
+
+#bt1{
+    background-color: #33cccc;
+}
+.typing{
+    color: #33cccc;
+}
+.typed-cursor{
+    color: #33cccc;
+}
+.sun_green_text {
+    color: #006666;
+}
+
+.sun_yellow_text {
+    color: #FFCC00;
+}
+
+.sun_green1_text {
+    color: #33CCCC;
+}
+
+.invalid_feedback {
+    color: rgb(255, 0, 0);
+}
+
+.adresse_field{
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    width: 90%;
+    margin: auto;
+}
+
+.column {
+    margin-left: 10px;
+    float: left;
+    width: 32%;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    text-align: center;
+    }
+    .input-group 
+    {
+        background-color: white;
+
+    }
+    .icofont-home
+    {
+        color: #33cccc;
+    }
+
+    .icofont-question-circle
+    {
+        color: #33cccc;
+    }
+    #h
+    {
+        color : red;
+    }
+    #hh
+    {
+        color : red;
+    }
