@@ -817,8 +817,6 @@
         </div>
     </div>
   </section><!-- red section -->
-
-  <app-footer></app-footer>
     <div class="bottom-bar dark-bg text-center">
         <div class="container">
             <p itemprop="description">&copy; 2021 <a class="red-clr" href="http://webinane.com/" title="Webinane" itemprop="url" target="_blank">SPEED'EAT</a>. All Rights Reserved</p>
@@ -854,17 +852,18 @@
                     <a class="twitter brd-rd3" href="#" title="Twitter" itemprop="url" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
                 </div>
                 <span class="popup-seprator text-center"><i class="brd-rd50">or</i></span>
-                <form class="sign-form">
+                <form class="sign-form" #form1="ngForm">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-lg-12">
-                            <input class="brd-rd3" type="text" id="email1" placeholder="Email" formControlName="email1">
+                            <input class="brd-rd3" type="text" id="email1" placeholder="Email" [(ngModel)]="email1" required [ngModelOptions]="{standalone: true}">
                         </div>
                         <div class="col-md-12 col-sm-12 col-lg-12">
-                            <input class="brd-rd3" type="password" id="password1" placeholder="Password" formControlName="password1">
+                            <input class="brd-rd3" type="password" id="password1" placeholder="Password" [(ngModel)]="password1" [ngModelOptions]="{standalone: true}">
                         </div>
                         <div class="col-md-12 col-sm-12 col-lg-12">
-                            <button class="red-bg brd-rd3" type="submit">SIGN IN</button>
+                            <button class="red-bg brd-rd3" type="submit" [disabled]="form1.invalid" (click)="CheckUser()">SIGN IN</button>
                         </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12" *ngIf="error1.length">{{ error1.join(' ') }}</div>
                         <div class="col-md-12 col-sm-12 col-lg-12">
                             <a class="sign-btn" href="#" title="" itemprop="url">Not a member? Sign up</a>
                             <a class="recover-btn" href="#" title="" itemprop="url">Recover my password</a>
@@ -889,22 +888,22 @@
                     <a class="twitter brd-rd3" href="#" title="Twitter" itemprop="url" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
                 </div>
                 <span class="popup-seprator text-center"><i class="brd-rd50">or</i></span>
-                <form class="sign-form" >
+                <form class="sign-form" #form="ngForm">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-lg-12">
-                            <input class="brd-rd3" type="text" id="nom" placeholder="Nom" formControlName="nom">
+                            <input class="brd-rd3" type="text" id="nom" placeholder="Nom" [(ngModel)]="nom" [ngModelOptions]="{standalone: true}">
                         </div>
                         <div class="col-md-12 col-sm-12 col-lg-12">
-                            <input class="brd-rd3" type="text" id="prenom" placeholder="prenom" formControlName="prenom">
+                            <input class="brd-rd3" type="text" id="prenom" placeholder="prenom" [(ngModel)]="prenom" [ngModelOptions]="{standalone: true}">
                         </div>
                         <div class="col-md-12 col-sm-12 col-lg-12">
-                            <input class="brd-rd3" type="text" id="email" placeholder="Email" formControlName="email">
+                            <input class="brd-rd3" type="text" id="email" placeholder="Email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
                         </div>
                         <div class="col-md-12 col-sm-12 col-lg-12">
-                            <input class="brd-rd3" type="password" id="password" placeholder="Password"  formControlName="password">
+                            <input class="brd-rd3" type="password" id="password" placeholder="Password"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
                         </div>
                         <div class="col-md-12 col-sm-12 col-lg-12">
-                            <button class="red-bg brd-rd3" type="submi">Save</button>
+                            <button class="red-bg brd-rd3" type="submi" [disabled]="form.invalid" (click)="AddUser()">Save</button>
                         </div>
                         <div class="col-md-12 col-sm-12 col-lg-12">
                             <a class="sign-btn" href="#" title="" itemprop="url">Account already? Sign in</a>

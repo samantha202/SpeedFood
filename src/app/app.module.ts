@@ -7,9 +7,10 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { PanelComponent } from './pages/panel/panel.component';
 import { FourOhFourComponent } from './pages/four-oh-four/four-oh-four.component';
-import { LoginComponent } from './views/login/login.component';
 import { SearchrComponent } from './views/searchr/searchr.component';
 import { HomeComponent } from './views/home/home.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,15 @@ import { HomeComponent } from './views/home/home.component';
     NavbarComponent,
     PanelComponent,
     FourOhFourComponent,
-    LoginComponent,
     SearchrComponent,
     HomeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
