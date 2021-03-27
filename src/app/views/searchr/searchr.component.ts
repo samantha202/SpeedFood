@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { GooglePlaceModule, GooglePlaceDirective } from "ngx-google-places-autocomplete";
+import { MapsService } from 'src/app/service/maps.service';
 
 @Component({
   selector: 'app-searchr',
   templateUrl: './searchr.component.html',
   styleUrls: ['./searchr.component.css']
 })
-export class SearchrComponent  {
+export class SearchrComponent  implements OnInit {
 
-  constructor() { }
-
+  constructor(private map : MapsService) 
+  {}
+   ngOnInit() {
+    this.map.initMap();
+  }
 }

@@ -12,6 +12,7 @@ import { HomeComponent } from './views/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,10 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     FormsModule,
     HttpClientModule,
     RouterModule,
-    GooglePlaceModule
+    GooglePlaceModule,
+    AgmCoreModule.forRoot({
+     apiKey: 'AIzaSyD2cPvVFGpXFhzNgEYoqrrGgZ-MW8ZDWQo'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
