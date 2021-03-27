@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GooglePlaceModule, GooglePlaceDirective } from "ngx-google-places-autocomplete";
 
 @Component({
   selector: 'app-searchr',

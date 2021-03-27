@@ -11,6 +11,7 @@ import { SearchrComponent } from './views/searchr/searchr.component';
 import { HomeComponent } from './views/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    GooglePlaceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
