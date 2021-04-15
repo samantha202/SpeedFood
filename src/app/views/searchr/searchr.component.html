@@ -16,9 +16,9 @@
               </div>
               <form>
                   <div class="form-group">
-                    <input class="brd-rd3" ngx-google-places-autocomplete class="form-control" placeholder="restaurant adresse please"> 
+                    <input class="brd-rd3" ngx-google-places-autocomplete class="form-control" id="adresses" placeholder="restaurant adresse please"> 
                   </div>
-                    <button class="brd-rd2 red-bg" type="submit">Search</button>
+                    <button class="brd-rd2 red-bg" type="submit" (click) = doMaps()>Search</button>
               </form>
           </div>
          <div class="col-md-6">

@@ -17,9 +17,8 @@ export class HomeComponent implements OnInit {
   email = '';
   email1 = '';
   password1 = '';
-  error1 = [''];
-  error = [];
-  u : Utilisateur[] | undefined;
+  errors: string[] = [];
+  users: undefined|null|Utilisateur|any;
   submitted: any;
   AdresseClientI : any;
   AdresseClientB : any;
@@ -45,28 +44,23 @@ export class HomeComponent implements OnInit {
       }
     );
   }
-  CheckUser()
+  async CheckUser()
   {
-    
-  this.user.getUserPL(this.email1,this.password1)
-  .pipe(first()).subscribe(
-    user => {
-      if(user.password === "")
-      {
-        this.error1 = ['your login or your password it is not correct'];
-      }else
-      { 
-        let result : any;
-        result = JSON.stringify(user);
-        //resut as Utilisateur;
-        console.log("my result  "+result);
-        this.router.navigate(['/search']);
-      }
-    },
-    error =>
-    { 
-      this.error1 = ['your login or your password it is not correct'];
-    } 
-    );
+    this.users = await this.user.getUserPL(this.email1,this.password1).toPromise();
+    try{
+      this.errors = [];
+      console.log("before test ",this.users);
+    if(this.users[0].password === this.password1 && this.users[0].email === this.email1)
+    {
+      console.log("my result  ",this.users[0].email);
+      this.router.navigate(['/search']);
+    }
+    }catch(err)
+    {
+      this.errors = ['Votre login ou votre password est incorrect'];
+      throw err;
+      this.errors = [];
+   }
+   return this.users;
   }
 }
