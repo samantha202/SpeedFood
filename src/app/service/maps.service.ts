@@ -77,7 +77,7 @@ SearchRestaurant(adr:string) {
     '<div id="content">' +
     '<div id="siteNotice">' +
     "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">Uluru</h1>' +'</div>'+'</div>'
+    '<h3><a href="http://localhost:4200/website">Website</a></h3>'+'</div>'+'</div>'
 
   marker.bindTo('bounds',map);
   marker.setVisible(true);

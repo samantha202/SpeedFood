@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { AgmCoreModule } from '@agm/core';
+import { WebsiteComponent } from './views/website/website.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AgmCoreModule } from '@agm/core';
     FourOhFourComponent,
     SearchrComponent,
     HomeComponent,
+    WebsiteComponent,
   ],
   imports: [
     BrowserModule,

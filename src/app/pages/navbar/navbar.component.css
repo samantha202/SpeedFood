@@ -1,3 +1,20 @@
 #bt1{
     background-color: #33cccc;
 }
+.shopping-cart {
+    margin: 20px 0;
+    float: right;
+    background: white;
+    width: 320px;
+    position: relative;
+    border-radius: 3px;
+    padding: 20px;
+}
+#cont1
+{
+    display: flex;
+    justify-content: space-between;
+}  
+#isd{
+    padding: 20 !important;
+}

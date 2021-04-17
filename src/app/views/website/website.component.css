@@ -1,0 +1,14 @@
+#conteneur
+{
+    justify-content: center;
+    align-items: center;
+}
+#im {
+    max-width: 100%;
+    height: auto;
+}
+  #space
+  {
+      display: flex;
+      justify-content: space-around;
+  }
