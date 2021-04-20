@@ -12,8 +12,8 @@
                         <li><a class="brd-rd30" data-filter=".filter-item4" href="#" itemprop="url">Chinese cuisine</a></li>
                         <li><a class="brd-rd30" data-filter=".filter-item5" href="#" itemprop="url">Starters</a></li>
                         <li><a class="brd-rd30" data-filter=".filter-item6" href="#" itemprop="url">Beverages</a></li>
+                        <li><a id="cart" itemprop="url" routerLink="/reservation"><i class="fa fa-shopping-cart" style="font-size:50px;color:#6394F8"></i><span class="badge">{{count}}</span></a></li>
                     </ul><!-- Filter Buttons -->
-                
                     <div class="col-md-12 col-sm-12 col-lg-12">
                         <div class="filters-wrapper">
                         <div class="title1-wrapper">            
@@ -30,7 +30,7 @@
                                           <div><span class="price">50€</span></div>
                                           <div>
                                               <ul class="post-meta">
-                                               <li><a href="#" class="btn btn-primary">Add Chart</a></li>  
+                                               <li><a class="btn btn-primary" (click)="addList('Barbeque_Chicken','Pizza',50)">Add Chart</a></li>  
                                               </ul>
                                             </div>
                                         </div>    

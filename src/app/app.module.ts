@@ -14,6 +14,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { AgmCoreModule } from '@agm/core';
 import { WebsiteComponent } from './views/website/website.component';
+import { ReservationComponent } from './views/reservation/reservation.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { WebsiteComponent } from './views/website/website.component';
     SearchrComponent,
     HomeComponent,
     WebsiteComponent,
+    ReservationComponent,
   ],
   imports: [
     BrowserModule,
