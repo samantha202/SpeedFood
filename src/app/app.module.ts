@@ -15,6 +15,8 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { AgmCoreModule } from '@agm/core';
 import { WebsiteComponent } from './views/website/website.component';
 import { ReservationComponent } from './views/reservation/reservation.component';
+import {NgxWebstorageModule} from 'ngx-webstorage';
+import {NgxStripeModule } from "ngx-stripe";
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { ReservationComponent } from './views/reservation/reservation.component'
     HttpClientModule,
     RouterModule,
     GooglePlaceModule,
+    NgxWebstorageModule.forRoot(),
+    NgxStripeModule.forRoot('pk_test_51IbmXgDHFVIVSFomcH3KsE2Oo1ofJFAjowTVbektCku0K91PjnTOfarXkC82nBMXLYGYUYZtiAursVeUajLlTMfY009K7T2PgM'),
     AgmCoreModule.forRoot({
      apiKey: 'AIzaSyD2cPvVFGpXFhzNgEYoqrrGgZ-MW8ZDWQo'
     }),
