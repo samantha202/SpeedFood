@@ -61,40 +61,39 @@
                                                     <div class="row mrg20">
                                                         <div class="col-md-6 col-sm-6 col-lg-6">
                                                             <label>First Name <sup>*</sup></label>
-                                                            <input class="brd-rd3" type="text">
+                                                            <input class="brd-rd3" [(ngModel)]="nom" type="text" [ngModelOptions]="{standalone: true}">
                                                         </div>
                                                         <div class="col-md-6 col-sm-6 col-lg-6">
                                                             <label>Last Name <sup>*</sup></label>
-                                                            <input class="brd-rd3" type="text">
+                                                            <input class="brd-rd3"  [(ngModel)]="prenom" type="text" [ngModelOptions]="{standalone: true}">
                                                         </div>
                                                         <div class="col-md-6 col-sm-6 col-lg-6">
                                                             <label>Email <sup>*</sup></label>
-                                                            <input class="brd-rd3" type="email">
+                                                            <input class="brd-rd3" type="email"  [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
                                                         </div>
                                                         <div class="col-md-6 col-sm-6 col-lg-6">
                                                             <label>Phone <sup>*</sup></label>
                                                             <input class="brd-rd3" type="text">
                                                         </div>
-                                                        <div class="col-md-12 col-sm-12 col-lg-12">
-                                                            <label>Address <sup>*</sup></label>
-                                                            <input class="brd-rd3" type="text">
-                                                        </div>
-                                                        <div class="col-md-12 col-sm-12 col-lg-12">
-                                                            <label>Date <sup>*</sup></label>
+                                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                                            <label>Date<sup>*</sup></label>
                                                             <input class="brd-rd3" type="date">
                                                         </div>
-                                                        <div class="pay-mnt" id="space">
+                                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                                            <label>Heure<sup>*</sup></label>
+                                                            <input class="brd-rd3" type="time">
+                                                        </div>
+                                                        <div id="space">
                                                             <div class="col-md-12 col-sm-12 col-lg-12">
                                                                 <img src="assets/images/pay-mthd-img.jpg" alt="pay-mthd-img.jpg" itemprop="image">
                                                             </div>
                                                             <div class="col-md-12 col-sm-12 col-lg-12">
-                                                                <input class="brd-rd3" type="text" placeholder="your carte">
+                                                                <div id="card-element" class="field"></div>
                                                             </div> 
                                                         </div>
                                                         <div class="col-md-12 col-sm-12 col-lg-12">
                                                             <div class="step-buttons">
-                                                                <a class="brd-rd3" href="#" title="" itemprop="url">Back Step</a>
-                                                                <a class="brd-rd3 red-bg" href="#" title="" itemprop="url">Next Step</a>
+                                                                <a class="brd-rd3 red-bg" (click)="buy()" title="" itemprop="url">Confirm</a>
                                                             </div>
                                                         </div>
                                                     </div>
