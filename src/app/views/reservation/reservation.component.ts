@@ -4,6 +4,7 @@ import {Food} from 'src/app/models/food';
 import {SessionStorageService} from 'ngx-webstorage';
 import { StripeService,ElementsOptions,Elements,Element as StripeElement, } from "ngx-stripe";
 import {HttpClient } from '@angular/common/http';
+import { PdfService} from 'src/app/service/pdf.service';
 
 @Component({
   selector: 'app-reservation',
@@ -23,6 +24,7 @@ export class ReservationComponent implements OnInit {
   constructor(private nav:NavService,
     private session: SessionStorageService,
     private stripeService: StripeService,
+    private dml:PdfService,
     private http: HttpClient) 
   {
     this.food = Array();
@@ -70,6 +72,9 @@ export class ReservationComponent implements OnInit {
         this.card.mount('#card-element');
       }
     })
+  }
+  buy1(){
+    this.dml.downloadPDF(this.food,this.total);
   }
   buy(){
     const promise = this.stripeService.createToken(this.card,{}).toPromise();
